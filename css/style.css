@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #1e2d3b;
 }
 
 /* COMMON */
@@ -29,10 +30,7 @@ header img {
 }
 
 /* MAIN */
-main {
-    background-color: #1e2d3b;
-    height: 100vh;
-  }
+
 main section {
     width: 80%;
     margin: 0 auto;

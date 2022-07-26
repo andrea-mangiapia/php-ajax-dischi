@@ -1,7 +1,4 @@
-<?php
-include __DIR__ . '/$database.php';
-
-?>
+<?php include __DIR__ . '/database.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +6,7 @@ include __DIR__ . '/$database.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dischi PHP</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,23 +19,26 @@ include __DIR__ . '/$database.php';
             
             <!-- Album List -->
             <div class="list-disc">
-                <div class="single-card">
-                    <div class="img-card">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg" :alt="">
-                    </div>
-                    <div class="title-card">
-                        <h2>
-                            Title
-                        </h2>
-                        <div class="author-card">
-                            Author
+                <?php foreach($database as $singleDisc) { ?>
+                    <div class="single-card">
+                        <div class="img-card">
+                            <img src="<?php echo $singleDisc['poster'] ?>" alt="<?php echo $singleDisc['title'] ?>">
                         </div>
-                        <div class="year-card">
-                            Date
-                        </div>
+                        <div class="title-card">
+                            <h2>
+                                <?php echo $singleDisc['title'] ?>
+                            </h2>
+                            <div class="author-card">
+                                <?php echo $singleDisc['author'] ?>
+                            </div>
+                            <div class="year-card">
+                                <?php echo $singleDisc['year'] ?>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
+
+                <?php } ?>
             </div>
             
         </section>
