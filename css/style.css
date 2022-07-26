@@ -1,0 +1,70 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* COMMON */
+img {
+    width: 100%;
+    display: block;
+}
+
+/* HEADER */
+header {
+    background-color: #2e3a46;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+header img {
+    width: 30px;
+}
+
+/* MAIN */
+main {
+    background-color: #1e2d3b;
+    height: 100vh;
+  }
+main section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+main section .list-disc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-select {
+    color: white;
+}
+.content-select label {
+    padding-right: 5px;
+}
+
+/* Card */
+.single-card {
+    width: calc((100% / 5) - 20px);
+    background-color: #2e3a46;
+    padding: 10px;
+    text-align: center;
+}
+.single-card h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 0;
+}
+.single-card, .autor-card, .year-card {
+    font-size: 12px;
+    color: white;
+}
